@@ -1,4 +1,6 @@
 'use strict';
+
+// sets the git hub user the page will display
 var user = 'JoshuaWordSmith';
 
 

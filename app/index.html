@@ -23,6 +23,7 @@
         <![endif]-->
 
 <!-- the menu bar at the top of the page. Contains icon, notifications, search bar that expands when selected, explore link,  gist link, blog link, help link, profile link with icon, new, settings, and logout -->
+<div class="menu-boundry">
 <div class="menu">
     <a href="https://www.github.com"><img src="images/octocat-icon-big.png"></a>    
     <div class="notify">
@@ -33,7 +34,8 @@
     <a href="https://gist.github.com/"> Gist </a>
     <a href="https://github.com/blog"> Blog </a>
     <a href="https://help.github.com/"> Help </a>
-    <div class="homepg"></div>
+
+<div class="menu-right">
 <!-- need to make profile link dynamic -->
     <div class="proimg">
         <a href="https://github.com/JoshuaWordSmith/">
@@ -41,7 +43,6 @@
             JoshuaWordSmith
         </a>
     </div>
-
     <div>
         <img src="images/plus-icon.png">
     </div>
@@ -51,91 +52,20 @@
      <div>
         <img src="images/logout-icon.png">
     </div>
+</div>
 
+</div>
 </div>
 
 
 
 
+<!-- div that holds the main elements -->
+<div class="content-main">
 
 <!-- left info pane. contains avatar picture, join date, personal info, organizations, folowers/starred/following -->
 <!-- empty left column to be filled -->
-<div class="info-list">
-</div>
-<!-- dynamic info being pushed into left column -->
-<script type="text/template" class="info-master">
-    <div>
-        <a href="https://github.com/settings/profile">
-        <img src=<%=avatar_url%> class="avatar">
-        </a>
-    </div>
-
-    <div class = "pro-block">
-        <h1 class ="info">
-           <%=name%>
-        </h1>
-         <h3 class ="info">
-           <%=login%>
-        </h3>
-    </div>
-
-    <div class = "pro-block">
-        <span class ="info">
-            <img src="images/company-icon.png">
-            <%=company%>
-        </span>
-        <span class ="info">
-            <img src="images/gps-icon.png">
-            <%=location%>
-        </span>
-        <span class ="info">
-            <img src="images/email-icon.png">
-            <a href=<%=email%>>
-            <%=email%>
-            </a>
-        </span>
-        <span class ="info">
-            <img src="images/link-icon.png">
-            <a href=<%=blog%>>
-            <%=blog%>
-            </a>
-            
-        </span>
-        <span class ="info">
-            <img src="images/clock-icon.png">
-            <%=created_at%>
-        </span>
-    </div>
-
-    <div class = "pro-block">
-
-        <a href="https://github.com/<%=login%>/followers">
-            <div class = "stat-block">  
-                <span class ="info">
-                    <%=followers%>:Followers
-                </span>
-            </div>
-        </a>
-
-        <a href="https://github.com/stars/<%=login%>">
-            <div class = "stat-block">  
-                <div class ="info">
-                   1 :Starred
-                </div>
-            </div>
-        </a>
-
-        <a href="https://github.com/<%=login%>/following">
-            <div class = "stat-block">  
-                <span class ="info">
-                    <%=following%> :Following
-                </span>
-            </div>
-        </a>
-
-    </div>
-</script>
-
+<div class="info-list"></div>
 <!-- tabs section. contains tab for contributions, repos, public activity, and an edit profile button, search repo input field and button, filters for all/public/private/sourceforks/mirrors, and a new repo button -->
 <div class="tabs">
     <div class="tabs-top">
@@ -175,8 +105,86 @@
 </div>
 
 </div>
-<!-- repo div. should contain all repositories with dynamic info. each entry needs title, description, public icon, last updated, language of work, starred, and branches info -->
 <div class="repo-list"></div>
+</div>
+<!-- dynamic info being pushed into left column -->
+<script type="text/template" class="info-master">
+    <div>
+        <a href="https://github.com/settings/profile">
+        <img src=<%=avatar_url%> class="avatar">
+        </a>
+    </div>
+
+    <div class = "pro-block">
+        <h2 class ="info">
+           <%=name%>
+        </h2>
+         <h3 class ="info">
+           <%=login%>
+        </h3>
+    </div>
+
+    <div>
+        <span class ="info">
+            <img src="images/company-icon.png">
+            <%=company%>
+        </span>
+        <span class ="info">
+            <img src="images/gps-icon.png">
+            <%=location%>
+        </span>
+        <span class ="info">
+            <img src="images/email-icon.png">
+            <a href=<%=email%>>
+            <%=email%>
+            </a>
+        </span>
+        <span class ="info">
+            <img src="images/link-icon.png">
+            <a href=<%=blog%>>
+            <%=blog%>
+            </a>
+            
+        </span>
+        <span class ="info">
+            <img src="images/clock-icon.png">
+            <%=created_at%>
+        </span>
+    </div>
+
+    <div>
+
+        <a href="https://github.com/<%=login%>/followers">
+            <div class = "stat-block">  
+                <span class ="info">
+                    <%=followers%>:Followers
+                </span>
+            </div>
+        </a>
+
+        <a href="https://github.com/stars/<%=login%>">
+            <div class = "stat-block">  
+                <div class ="info">
+                   1 :Starred
+                </div>
+            </div>
+        </a>
+
+        <a href="https://github.com/<%=login%>/following">
+            <div class = "stat-block">  
+                <span class ="info">
+                    <%=following%> :Following
+                </span>
+            </div>
+        </a>
+
+    </div>
+</script>
+
+
+
+<!-- repo div. should contain all repositories with dynamic info. each entry needs title, description, public icon, last updated, language of work, starred, and branches info -->
+
 <script type="text/template" class="repo-master">
     <div class="repo-entry">
 
