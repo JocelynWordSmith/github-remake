@@ -172,13 +172,17 @@ body {
 .tabs-top  {
     float: left;
     height: 50px;
+    width: 726px;
     
     div {
         float: left;
+        line-height: 50px;
+        font-size: 15px;
+        margin-left: 14px;
     }
     img {
-        height: 12px;
-        width: 12px;
+        height: 15px;
+        width: 15px;
     }
 }
 
@@ -188,15 +192,22 @@ body {
     height: 50px;
 }
 .tabs-bottom div {
-
+    line-height: 50px;
+    font-size: 15px;
+    margin-left: 12px;
     float: left;
 }
 .tabs-bottom img {
     height: 12px;
     width: 12px;
 }
+.tabs-bottom input {
+    width: 258px;
+    height: 28px;
+    margin-left: -10px;
+}
 .new-repo {
-    /*background-color: #68b9fc;*/
+    background-color: #6ebf51;
     color: white;
     font-size: 12px;
 }
