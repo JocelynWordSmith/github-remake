@@ -51,7 +51,7 @@ body {
     text-align: center;
     line-height: 40px;
     /*margin-bottom: 1px; */
-    border: solid 1px gray;
+    /*border: solid 1px gray;*/
     margin-left: 7%;
     margin-right: 5%;
     display: inline-block;
@@ -75,14 +75,14 @@ body {
 .content-main {
     width: 1000px;
     margin-left: 8%;
-    background-color: blue;
+    /*background-color: blue;*/
 }
 
 /*left column settings*/
 .info-list {
     float:left; 
     width: 268px;
-    background-color: #D2D4D9;
+    /*background-color: #D2D4D9;*/
     min-height: 598px;
     /*text-align: center;*/
     /*border: solid 1px gray;*/
@@ -116,7 +116,7 @@ body {
 .tabs {
     float:left; 
     width: 726px;
-    background-color: #D2D4D9;
+    /*background-color: #D2D4D9;*/
     height: 53px;
     border: solid 1px gray;
     font-size: 12px;
@@ -143,7 +143,7 @@ body {
     width: 12px;
 }
 .new-repo {
-    background-color: #68b9fc;
+    /*background-color: #68b9fc;*/
     color: white;
     font-size: 12px;
 }
@@ -153,17 +153,16 @@ body {
 
 .repo-list {
     float: left;
-    background-color: #D2D4D9;
+    /*background-color: #D2D4D9;*/
     min-height: 110px;
-    border: solid 1px gray;
+    /*border: solid 1px gray;*/
     width: 726px;
 }
 .repo-entry {
     clear: both;
     float: left;
     width: 726px;
-    border: solid 1px black;
-
+    border-bottom: solid 1px gray;
 }
 .entry-left {
     float: left;
@@ -185,9 +184,10 @@ body {
 .contact {
     float:left; 
     min-width: 1022px;
-    background-color: #D2D4D9;
+    /*background-color: #D2D4D9;*/
     height: 96px;
-    border: solid 1px gray;
+    border-top: solid 1px gray;
+    margin-left: 8%;
 
         p, a {
             display: inline-block;
